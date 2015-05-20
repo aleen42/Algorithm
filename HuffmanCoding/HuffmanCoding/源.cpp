@@ -18,36 +18,12 @@ public:
 
 	coded_char* left, *right;
 
-	void setcode(string s)
-	{
-		code = s;
-	}
-
-	string getcode()
-	{
-		return code;
-	}
-
-	double getweight()
-	{
-		return weight;
-	}
-
-	bool getiscoded()
-	{
-		return iscoded;
-	}
-
-	void setiscoded()
-	{
-		iscoded = true;
-	}
-
-	char getvalue()
-	{
-		return value;
-	}
-
+	void setcode(string s){code = s;}
+	string getcode(){return code;}
+	double getweight(){return weight;}
+	bool getiscoded(){return iscoded;}
+	void setiscoded(){iscoded = true;}
+	char getvalue(){return value;}
 };
 
 coded_char* get_last(coded_char* data[], int end)
