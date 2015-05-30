@@ -1,0 +1,6 @@
+F:\School\Programing\C Programing\Algorithm\WAV\WAV\bin\Debug\WAV.exe.config
+F:\School\Programing\C Programing\Algorithm\WAV\WAV\bin\Debug\WAV.exe
+F:\School\Programing\C Programing\Algorithm\WAV\WAV\bin\Debug\WAV.pdb
+F:\School\Programing\C Programing\Algorithm\WAV\WAV\obj\Debug\WAV.csprojResolveAssemblyReference.cache
+F:\School\Programing\C Programing\Algorithm\WAV\WAV\obj\Debug\WAV.exe
+F:\School\Programing\C Programing\Algorithm\WAV\WAV\obj\Debug\WAV.pdb

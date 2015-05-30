@@ -62,7 +62,7 @@ void Merge(int A[], int p, int m, int q)
 {
 	int n1 = m - p + 1;
 	int n2 = q - (m + 1) + 1;
-	int L[MAXSIZE], R[MAXSIZE];				//·Ö±ð·Å½øÁ½¸ö¶ÓÁÐ
+	int L[MAXSIZE], R[MAXSIZE];				//åˆ†åˆ«æ”¾è¿›ä¸¤ä¸ªé˜Ÿåˆ—
 	for (int i = 1; i <= n1; i++)
 	{
 		L[i] = A[p + i - 1];
@@ -75,7 +75,7 @@ void Merge(int A[], int p, int m, int q)
 	R[n2 + 1] = INFINITY;
 	int i = 1;
 	int j = 1;
-	for (int k = p; k <= q; k++)				//Á½¶ÔÍ·±È½Ï£¬½ÏÐ¡µÄ·ÅÈë
+	for (int k = p; k <= q; k++)				//ä¸¤å¯¹å¤´æ¯”è¾ƒï¼Œè¾ƒå°çš„æ”¾å…¥
 	{
 		if (L[i] <= R[j])
 		{

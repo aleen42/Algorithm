@@ -18,8 +18,8 @@ public:
 };
 
 dictionary* d[MAXSIZE];
-int num;		//±íÊ¾µ±Ç°´ÊµäÄÚÔªËØµÄ¸öÊı
-int _count;		//³õÊ¼»¯´ÊµäÄÚÔªËØµÄ¸öÊı
+int num;		//è¡¨ç¤ºå½“å‰è¯å…¸å†…å…ƒç´ çš„ä¸ªæ•°
+int _count;		//åˆå§‹åŒ–è¯å…¸å†…å…ƒç´ çš„ä¸ªæ•°
 
 char decode_output[MAXSIZE] = "";
 
@@ -44,7 +44,7 @@ void LZW_DECODING()
 void LZW_CODING(const char* input)
 {
 	const char* ch = input;
-	int count = 1;					//ÓÃÓÚcharÖ¸ÕëÌø×ª
+	int count = 1;					//ç”¨äºcharæŒ‡é’ˆè·³è½¬
 	while (*(ch + 1) != '\0')
 	{
 		char a[MAXSIZE];
@@ -95,7 +95,7 @@ void LZW_CODING(const char* input)
 
 	cout << "EnCode: ";
 	for (int i = _count; i < num; i++)
-		cout << (*d[i]).get_code();
+		cout << (*d[i]).get_code() << ' ';
 	cout << endl;
 }
 
@@ -129,20 +129,26 @@ int main()
 	num = 0;
 	INITIALIZE_DICTIONARY("ABABCDEFGEFG");
 	_count = num;
-	//for (int i = 0; i < num; i++)
-	//	cout << (*d[i]).get_index() << ' ' << (*d[i]).get_value() << endl;
+	
 	//LZW_CODING("ABBABABAC");
 	LZW_CODING("ABABCDEFGEFG");
-
 	LZW_DECODING();
+	for (int i = 0; i < num - 1; i++)
+		cout << (*d[i]).get_index() << ' ' << (*d[i]).get_value() << endl;
+	cout << endl;
+	
 
 	/* Case 2 */
 	num = 0;
 	INITIALIZE_DICTIONARY("ABBABABAC");
+	
 	_count = num;
 	LZW_CODING("ABBABABAC");
-
 	LZW_DECODING();
+	for (int i = 0; i < num - 1; i++)
+		cout << (*d[i]).get_index() << ' ' << (*d[i]).get_value() << endl;
+	cout << endl;
+	
 
 	system("pause");
 	return 0;

@@ -43,10 +43,11 @@ long double ARITHMETIC_CODING(char* input)
 			{	//"00"
 				end = start + (end - start) * (weight[0]);
 			}
-			cout.precision(20);										//…Ë÷√æ´∂»£¨∑¿÷πÀ ß
+			cout.precision(20);										
 			printf("start: %.12lf, end: %.12lf\n", start, end);
 		}
-		return (start + end) / 2;
+		//return (start + end) / 2;
+		return end;
 	}
 }
 
@@ -58,6 +59,7 @@ int main()
 	weight[2] = 0.2;	//"10"
 	weight[1] = 0.4;	//"01"
 	weight[0] = 0.1;	//"00"
+	printf("%.12lf\n", ARITHMETIC_CODING("10001100101101"));
 	//cout << "Weight:" << endl;
 	//do
 	//{
@@ -81,7 +83,7 @@ int main()
 	//	cin >> weight[0];
 	//} while (weight[0] < 0.0 || weight[0] > 1.1- (weight[3] + weight[2] + weight[1] + 0.1));
 
-	printf("%.12lf\n", ARITHMETIC_CODING("10001100101101"));
+	
 	//cout << ARITHMETIC_CODING("10001100101101") << endl;
 
 
