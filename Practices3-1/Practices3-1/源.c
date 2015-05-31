@@ -164,7 +164,7 @@ int main()
 	//		printf("%-4d", c[i][j]);
 	//	printf("\n");
 	//}
-	printf("%-4d", c[size][capacity]);
+	printf("%-4d\n", c[size][capacity]);
 	
 
 	system("pause");
