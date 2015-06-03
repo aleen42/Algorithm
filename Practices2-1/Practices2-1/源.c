@@ -6,7 +6,7 @@
 #define case1_num 4
 #define case2_num 4
 #define case3_num 5
-#define case4_num 5
+#define case4_num 6
 
 void MATRIX_CHAIN_ORDER(int m[][MAXSIZE], int s[][MAXSIZE], int p[], int p_array_size);
 void PRINT_OPTIMAL_PARENS(int s[][MAXSIZE], int i, int j);
@@ -41,9 +41,18 @@ int main()
 	printf("\n");
 
 	/* case 4 */
-	int case4[case4_num + 1] = { 7, 2, 4, 15, 20, 5 };
+	int case4[case4_num + 1] = { 5, 10, 3, 12, 5, 50, 6 };
 	MATRIX_CHAIN_ORDER(m, s, case4, case4_num + 1);
 	PRINT_OPTIMAL_PARENS(s, 1, case4_num);
+	printf("\n");
+	for (int i = 0; i <= case4_num; i++)
+	{
+		for (int j = 0; j <= case4_num; j++)
+		{
+			printf("%-15d", s[i][j]);
+		}
+		printf("\n");
+	}
 	printf("\n");
 
 
